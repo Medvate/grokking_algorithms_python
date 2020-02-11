@@ -15,9 +15,16 @@ def stupid_search(arr, item):
     :return: Возвращает индекс искомого элемента.
              Если такой элемент не был найден - возвращает None.
     """
-    for i in range(len(arr)):
-        if item == arr[i]:
+    for i, elem in enumerate(arr):
+        if item == elem:
             return i
     else:
         print('Элемент {0} не был обнаружен!'.format(item))
         return
+
+
+a = [0, -3, 2, 1, 17, -100, 200, 561, 5, -9, -10, 9]
+
+for item in a:
+    print(stupid_search(a, item))
+
